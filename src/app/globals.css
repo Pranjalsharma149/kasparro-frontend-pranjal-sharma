@@ -2,25 +2,77 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #09090b; /* Zinc 950 */
+  
+  /* Brand Colors */
+  --color-brand-blue: #2563eb;
+  --color-brand-zinc: #71717a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Mapping Tailwind tokens to your Geist Font Variables */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom Brand Colors */
+  --color-blue-600: #2563eb;
+  --color-zinc-950: #09090b;
+
+  /* Custom Animations for Kasparro Components */
+  @keyframes soft-pulse {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.05); }
+  }
+  --animate-soft-pulse: soft-pulse 4s ease-in-out infinite;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #09090b;
+    --foreground: #fafafa;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Base Styles */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    /* FIXED: Using Geist font variables instead of Arial */
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Smooth scrolling for the dashboard audits */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Utilities for technical UI */
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(228, 228, 231, 0.5);
+  }
+
+  /* Custom Scrollbar for Sidebar and Terminal Logs */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #e4e4e7; /* Zinc 200 */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Blue 600 */
+  }
 }
