@@ -1,0 +1,41 @@
+[
+  {
+    "id": "B-001",
+    "name": "Kasparro Labs",
+    "industry": "AI Intelligence",
+    "visibilityScore": 84.2,
+    "lastAuditDate": "2025-12-15",
+    "isPrimary": true,
+    "metrics": {
+      "sentiment": 0.88,
+      "trust": 0.94,
+      "citations": 1200000
+    }
+  },
+  {
+    "id": "B-002",
+    "name": "Competitor Alpha",
+    "industry": "Enterprise SaaS",
+    "visibilityScore": 71.5,
+    "lastAuditDate": "2025-12-17",
+    "isPrimary": false,
+    "metrics": {
+      "sentiment": 0.62,
+      "trust": 0.70,
+      "citations": 850000
+    }
+  },
+  {
+    "id": "B-003",
+    "name": "Legacy Tech Corp",
+    "industry": "Computing",
+    "visibilityScore": 45.9,
+    "lastAuditDate": "2025-12-10",
+    "isPrimary": false,
+    "metrics": {
+      "sentiment": 0.40,
+      "trust": 0.55,
+      "citations": 2100000
+    }
+  }
+]

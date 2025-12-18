@@ -1,0 +1,56 @@
+{
+  "auditId": "KSP-SCAN-99201",
+  "timestamp": "2025-12-18T22:57:23Z",
+  "aggregateScore": 84,
+  "modules": [
+    {
+      "id": "MOD-01",
+      "name": "Visibility",
+      "score": 92,
+      "status": "Optimal",
+      "description": "Total brand footprint across Top-5 LLM training sets and RAG pipelines."
+    },
+    {
+      "id": "MOD-02",
+      "name": "Trust (EEAT)",
+      "score": 78,
+      "status": "Warning",
+      "description": "Verification of Experience, Expertise, Authoritativeness, and Trustworthiness signals."
+    },
+    {
+      "id": "MOD-03",
+      "name": "Sentiment",
+      "score": 85,
+      "status": "Stable",
+      "description": "Nuanced emotional weighting of brand mentions in generated outputs."
+    },
+    {
+      "id": "MOD-04",
+      "name": "Citation Graph",
+      "score": 64,
+      "status": "Critical",
+      "description": "Strength of direct URL references and secondary attribution nodes."
+    },
+    {
+      "id": "MOD-05",
+      "name": "Hallucination",
+      "score": 98,
+      "status": "Optimal",
+      "description": "Measurement of factual inaccuracy risk regarding brand-specific claims."
+    },
+    {
+      "id": "MOD-06",
+      "name": "Vector Alignment",
+      "score": 72,
+      "status": "Stable",
+      "description": "Proximity of brand semantic embeddings to industry authority clusters."
+    },
+    {
+      "id": "MOD-07",
+      "name": "Source Authority",
+      "score": 81,
+      "status": "Stable",
+      "description": "Weighting of primary domains acting as data sources for model fine-tuning."
+    }
+  ]
+}
